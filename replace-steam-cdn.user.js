@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.0.2
+// @version      1.1
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
@@ -22,10 +22,12 @@ function ReplaceSteamCDN_Replace(){
     // Akamai的链接暂时还不需要换……
     var doms=document.getElementsByTagName("img");
     for(var dom of doms){
+        dom.src=dom.src.replace("community.cloudflare.steamstatic.com","community.akamai.steamstatic.com");
         dom.src=dom.src.replace("cdn.cloudflare.steamstatic.com","media.st.dl.pinyuncloud.com");
     }
     doms=document.getElementsByTagName("a");
     for(dom of doms){
+        dom.href=dom.href.replace("community.cloudflare.steamstatic.com","community.akamai.steamstatic.com");
         dom.href=dom.href.replace("cdn.cloudflare.steamstatic.com","media.st.dl.pinyuncloud.com");
     }
     ReplaceSteamCDN_mo.observe(document.getRootNode(),{attributes:true,childList:true,subtree:true});
