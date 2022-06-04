@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.0.1
+// @version      1.0.2
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
@@ -18,6 +18,8 @@ function ReplaceSteamCDN_Replace(){
     "use strict";
     ReplaceSteamCDN_mo.disconnect();
     console.log("正在替换链接……");
+    // 将所有cdn.cloudflare.steamstatic.com的链接换成media.st.dl.pinyuncloud.com
+    // Akamai的链接暂时还不需要换……
     var doms=document.getElementsByTagName("img");
     for(var dom of doms){
         dom.src=dom.src.replace("cdn.cloudflare.steamstatic.com","media.st.dl.pinyuncloud.com");
@@ -34,7 +36,5 @@ let ReplaceSteamCDN_mo=new MutationObserver(mutations=>ReplaceSteamCDN_Replace()
 (function() {
     'use strict';
 
-    // 将所有cdn.cloudflare.steamstatic.com的链接换成media.st.dl.pinyuncloud.com
-    // Akamai的链接暂时还不需要换……
     ReplaceSteamCDN_Replace();
 })();
