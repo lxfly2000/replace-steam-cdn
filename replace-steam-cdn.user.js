@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.2
+// @version      1.2.1
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
@@ -31,13 +31,13 @@ function ReplaceSteamCDN_Replace(){
     }
     doms=document.getElementsByTagName("video");
     for(dom of doms){
-        for(var s of substitutions){
+        for(s of substitutions){
             dom.src=dom.src.replace(s.a,s.b);
         }
     }
     doms=document.getElementsByTagName("a");
     for(dom of doms){
-        for(var s of substitutions){
+        for(s of substitutions){
             dom.href=dom.href.replace(s.a,s.b);
         }
     }
