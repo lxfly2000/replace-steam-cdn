@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.3.1
+// @version      1.3.2
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
 // @author       lxfly2000
+// @match        *://*.steampowered.com/*
 // @match        *://steamcommunity.com/*
 // @match        *://steamdb.info/*
 // @match        *://steamcardexchange.net/*
