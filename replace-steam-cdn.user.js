@@ -20,7 +20,8 @@ var substitutions=[
     {a:"community.cloudflare.steamstatic.com",b:"community.akamai.steamstatic.com"},
     {a:"avatars.cloudflare.steamstatic.com",b:"avatars.st.dl.eccdnx.com"},
     {a:"cdn.cloudflare.steamstatic.com",b:"media.st.dl.eccdnx.com"},
-    {a:"cdn.akamai.steamstatic.com",b:"media.st.dl.eccdnx.com"}
+    {a:"cdn.akamai.steamstatic.com",b:"media.st.dl.eccdnx.com"},
+    {a:"avatars.akamai.steamstatic.com",b:"avatars.st.dl.eccdnx.com"}
 ];
 var asyncloadHosts=[
     "steamdb.info"
