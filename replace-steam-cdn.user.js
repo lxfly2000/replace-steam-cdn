@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.3.5
+// @version      1.3.6
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
@@ -18,10 +18,11 @@
 
 var substitutions=[
     {a:"community.cloudflare.steamstatic.com",b:"community.akamai.steamstatic.com"},
-    {a:"avatars.cloudflare.steamstatic.com",b:"avatars.st.dl.eccdnx.com"},
-    {a:"cdn.cloudflare.steamstatic.com",b:"media.st.dl.eccdnx.com"},
-    {a:"cdn.akamai.steamstatic.com",b:"media.st.dl.eccdnx.com"},
-    {a:"avatars.akamai.steamstatic.com",b:"avatars.st.dl.eccdnx.com"}
+    {a:"avatars.cloudflare.steamstatic.com",b:"avatars.cdn.queniuqe.com"},
+    {a:"cdn.cloudflare.steamstatic.com",b:"media.cdn.queniuqe.com"},
+    {a:"cdn.akamai.steamstatic.com",b:"media.cdn.queniuqe.com"},
+    {a:"avatars.akamai.steamstatic.com",b:"avatars.cdn.queniuqe.com"},
+    {a:"shared.akamai.steamstatic.com",b:"shared.cdn.queniuqe.com"}
 ];
 var asyncloadHosts=[
     "steamdb.info"
