@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Replace Steam CDN
 // @namespace    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
-// @version      1.3.6
+// @version      1.3.7
 // @updateURL    https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @downloadURL  https://github.com/lxfly2000/replace-steam-cdn/raw/master/replace-steam-cdn.user.js
 // @description  Replace Steam CDN
@@ -88,7 +88,7 @@ let ReplaceSteamCDN_mo=new MutationObserver(mutations=>ReplaceSteamCDN_Replace()
 var ReplaceSteamCDN_asyncload=false;
 
 function ReplaceSteamCDN_StartObserve(){
-    ReplaceSteamCDN_mo.observe(document.getRootNode(),{attributes:false,childList:false,subtree:true});
+    ReplaceSteamCDN_mo.observe(document.getRootNode(),{attributes:false,childList:false,characterData:true,subtree:true});
 }
 
 function ReplaceSteamCDN_StopObserve(){
